@@ -8,16 +8,15 @@ namespace assignment {
 
   // Task 1
   int squared_diff(int left, int right) {
-    return (right - left)*(right - left);
+    return (right - left) * (right - left);
   }
 
   // Task 2
   bool check_bit(int mask, int bit_pos) {
-    if (mask < 0 || bit_pos < 0){
+    if (mask < 0 || bit_pos < 0) {
       return false;
-    }
-    else{
-      return((mask >> bit_pos) == 1);
+    } else {
+      return ((mask >> bit_pos) == 1);
     }
   }
 
@@ -30,8 +29,8 @@ namespace assignment {
 
   // Task 4
   void swap_args(int *left, int *right) {
-    if(left == nullptr || right == nullptr) {}
-    else{
+    if (left == nullptr || right == nullptr) {
+    } else {
       int helper = *right;
       *right = *left;
       *left = helper;
@@ -40,11 +39,11 @@ namespace assignment {
 
   // Task 5
   int arr_sum(int *arr, int length) {
-    if (arr == nullptr || length <= 0){
+    if (arr == nullptr || length <= 0) {
       return 0;
     }
     int sum = 0;
-    for (int i = 0; i < length; i++){
+    for (int i = 0; i < length; i++) {
       sum += arr[i];
     }
     return sum;
@@ -52,13 +51,13 @@ namespace assignment {
 
   // Task 6
   int *find_max_elem(int *arr, int length) {
-    if (arr == nullptr || length <= 0){
+    if (arr == nullptr || length <= 0) {
       return 0;
     }
     int maxElem = arr[0];
-    int* pointerToMaxElem = &maxElem;
-    for (int i = 1; i < length; i++){
-      if(maxElem < arr[i]){
+    int *pointerToMaxElem = &maxElem;
+    for (int i = 1; i < length; i++) {
+      if (maxElem < arr[i]) {
         maxElem = arr[i];
         pointerToMaxElem = &arr[i];
       }
@@ -68,7 +67,7 @@ namespace assignment {
 
   // Task 7
   int *allocate_arr(int length, int init_value) {
-    if(length <= 0){
+    if (length <= 0) {
       return nullptr;
     }
     int *arr = new int[length];
@@ -78,7 +77,7 @@ namespace assignment {
 
   // Task 8
   int *clone_arr(int *arr_in, int length) {
-    if (arr_in == nullptr || length <= 0){
+    if (arr_in == nullptr || length <= 0) {
       return nullptr;
     }
     int *arr_out = new int[length];
@@ -88,17 +87,16 @@ namespace assignment {
 
   // Task 9
   void print_kth_elements(int *arr, int length, int k, std::ostream &os) {
-    if (arr == nullptr){
+    if (arr == nullptr) {
       os << "Invalid argument: arr\n";
     }
-    if (length <= 0){
+    if (length <= 0) {
       os << "Invalid argument: length\n";
     }
-    if (k <= 0){
+    if (k <= 0) {
       os << "Invalid argument: k\n";
-    }
-    else{
-      for (int i = 0; i < length; i += k){
+    } else {
+      for (int i = 0; i < length; i += k) {
         os << "arr[i]\t";
       }
     }
