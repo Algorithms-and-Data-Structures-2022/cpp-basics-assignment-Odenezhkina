@@ -45,7 +45,7 @@ namespace assignment {
     }
     int sum = 0;
     for (int i = 0; i < length; i++){
-      s += arr[i];
+      sum += arr[i];
     }
     return sum;
   }
